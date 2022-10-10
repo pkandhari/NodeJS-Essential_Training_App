@@ -13,7 +13,7 @@ steps:
   pull: if-not-exists
   image: cypress/browsers:node14.15.0-chrome96-ff94
   commands:
-  - npm install
+    - npm install
 
 - name: tests
   depends_on: ["install"]
@@ -21,17 +21,11 @@ steps:
   commands:
     - npm run test
 
-- name: lint
-  depends_on: ["install"]
-  image: cypress/browsers:node14.15.0-chrome96-ff94
-  commands:
-    - npm run lint
-
 - name: coverage
   depends_on: ["install"]
   image: cypress/browsers:node14.15.0-chrome96-ff94
   commands:
-  - npm run coverage
+    - npm run coverage
   environment:
     COVERALLS_REPO_TOKEN:
       from_secret: COVERALLS_REPO_TOKEN
