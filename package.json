@@ -11,7 +11,7 @@
     "build:production:tenfold": "ng build -c=\"production, tenfold\" --extra-webpack-config webpack.partial.js",
     "serve:dev:ringcentral": "ng serve -c=\"development,ringcentral\" --extra-webpack-config webpack.partial.js -o",
     "serve:dev:tenfold": "ng serve -c=\"development,tenfold\" --extra-webpack-config webpack.partial.js -o",
-    "coverage": "npm run test:unit-coverage && npm run test:coverage",
+    "coverage": "npm run test:coverage",
     "test:coverage": "cat ./coverage/lcov.info | coveralls",
     "lint:tslint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
     "lint:stylelint": "stylelint \"src/**/*.scss\" --custom-syntax postcss-scss",
